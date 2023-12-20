@@ -3,8 +3,30 @@ declare module "design-ui-test" {
     content?: string;
   }
 
+  export interface TThemeProviderProps {
+    colorScheme?: {
+      text?: string;
+      main?: string;
+      secondary?: string;
+      accent?: string;
+    };
+    fontSize?: {
+      t1?: number;
+      t2?: number;
+      t3?: number;
+      t4?: number;
+      t5?: number;
+    };
+    size?: "small" | "middle" | "large";
+    locale?: string;
+    localeBundle?: { lng: string; ns: "translation"; resources: any }[];
+    children: any;
+    fontFamily?: string;
+  }
+
   const TButton: React.FC;
   const TCowsay: React.FC<TCowsayProps>;
+  const TThemeProvider: React.FC<TThemeProviderProps>;
 
-  export { TButton, TCowsay };
+  export { TButton, TCowsay, TThemeProvider };
 }
