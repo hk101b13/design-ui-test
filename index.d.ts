@@ -1,15 +1,15 @@
 declare module "design-ui-test" {
   export interface TButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement> | undefined;
-    qType?: string;
-    qSize?: string;
+    qtype?: string;
+    qsize?: string;
 
     disabled?: boolean;
     loading?: boolean;
     children?: ReactNode;
     className?: string;
     style?: React.CSSProperties;
-    customStyle?: Interpolation<Theme>;
+    customstyle?: Interpolation<Theme>;
   }
   export interface TCowsayProps {
     content?: string;

@@ -16,7 +16,7 @@ export interface TButtonProps {
   children?: ReactNode;
   className?: string;
   style?: React.CSSProperties;
-  customStyle?: Interpolation<Theme>;
+  customstyle?: Interpolation<Theme>;
 }
 
 //hard to connect to component color
@@ -107,7 +107,7 @@ const StyledButton = styled(Button)<
   ButtonProps & {
     qtype?: string;
     qsize?: string;
-    customStyle?: Interpolation<Theme>;
+    customstyle?: Interpolation<Theme>;
   }
 >((props) => {
   const { fontSize, fontFamily, size } = useContext(ThemeContext);
@@ -137,8 +137,8 @@ const StyledButton = styled(Button)<
     },
     "&.ant-btn-loading": { cursor: "not-allowed" },
   };
-  const importantCustomStyles = AddImportantToStyles(props.customStyle);
-  return [baseStyles, importantCustomStyles];
+  const importantCustomstyles = AddImportantToStyles(props.customstyle);
+  return [baseStyles, importantCustomstyles];
 });
 
 export const TButton = React.forwardRef<any, TButtonProps>((props, ref) => {
@@ -152,7 +152,7 @@ export const TButton = React.forwardRef<any, TButtonProps>((props, ref) => {
         loading={props.loading}
         style={props.style}
         qtype={props.qtype}
-        customStyle={props.customStyle}
+        customstyle={props.customstyle}
         qsize={props.qsize}
       >
         {props.children}
