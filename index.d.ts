@@ -1,4 +1,16 @@
 declare module "design-ui-test" {
+  export interface TButtonProps {
+    onClick?: React.MouseEventHandler<HTMLElement> | undefined;
+    qType?: string;
+    qSize?: string;
+
+    disabled?: boolean;
+    loading?: boolean;
+    children?: ReactNode;
+    className?: string;
+    style?: React.CSSProperties;
+    customStyle?: Interpolation<Theme>;
+  }
   export interface TCowsayProps {
     content?: string;
   }
@@ -24,7 +36,7 @@ declare module "design-ui-test" {
     fontFamily?: string;
   }
 
-  const TButton: React.FC;
+  const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
 
