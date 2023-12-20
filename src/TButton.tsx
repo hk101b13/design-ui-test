@@ -8,8 +8,8 @@ import MColors from "./MColors.json";
 
 export interface TButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement> | undefined;
-  qType?: string;
-  qSize?: string;
+  qtype?: string;
+  qsize?: string;
 
   disabled?: boolean;
   loading?: boolean;
@@ -48,7 +48,7 @@ function SetButtonLayout(size: string | undefined): MButtonLayout {
   return buttonLayout;
 }
 
-function SetButtonColors(qType?: string): MButtonColor {
+function SetButtonColors(qtype?: string): MButtonColor {
   const { colorScheme } = useContext(ThemeContext);
   let buttonColor: MButtonColor;
   buttonColor = {
@@ -69,7 +69,7 @@ function SetButtonColors(qType?: string): MButtonColor {
     };
   }
 
-  switch (qType) {
+  switch (qtype) {
     case "info" || "success":
       buttonColor = {
         background: MColors.palettes.primary[50],
@@ -105,14 +105,14 @@ function SetButtonColors(qType?: string): MButtonColor {
 
 const StyledButton = styled(Button)<
   ButtonProps & {
-    qType?: string;
-    qSize?: string;
+    qtype?: string;
+    qsize?: string;
     customStyle?: Interpolation<Theme>;
   }
 >((props) => {
   const { fontSize, fontFamily, size } = useContext(ThemeContext);
-  let buttonColor = SetButtonColors(props.qType);
-  let buttonLayout = SetButtonLayout(size || props.qSize);
+  let buttonColor = SetButtonColors(props.qtype);
+  let buttonLayout = SetButtonLayout(size || props.qsize);
 
   const baseStyles = {
     width: "auto",
@@ -151,9 +151,9 @@ export const TButton = React.forwardRef<any, TButtonProps>((props, ref) => {
         disabled={props.disabled}
         loading={props.loading}
         style={props.style}
-        qType={props.qType}
+        qtype={props.qtype}
         customStyle={props.customStyle}
-        qSize={props.qSize}
+        qsize={props.qsize}
       >
         {props.children}
       </StyledButton>
