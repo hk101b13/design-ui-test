@@ -8,8 +8,8 @@ import MColors from "./MColors.json";
 
 export interface TButtonProps {
   onClick?: React.MouseEventHandler<HTMLElement> | undefined;
-  qtype?: string;
-  qsize?: string;
+  qtype?: "info" | "success" | "warning" | "error";
+  qsize?: "large" | "middle" | "small";
 
   disabled?: boolean;
   loading?: boolean;
