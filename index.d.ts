@@ -1,7 +1,13 @@
 declare module "design-ui-test" {
-  export interface MTableProps {
+  export interface TTableColor {
+    headerColor?: string;
+    rowColor?: string;
+    hoverRowColor?: string;
+    textColor?: string;
+  }
+  export interface TTableProps {
     customStyle?: Interpolation<Theme>;
-    tableColor?: MTableColor;
+    tableColor?: TTableColor;
   }
 
   export interface TButtonProps {
@@ -41,10 +47,10 @@ declare module "design-ui-test" {
     fontFamily?: string;
   }
 
-  const MTable: React.FC<MTableProps & TableProps<any>>;
+  const TTable: React.FC<TTableProps & TableProps<any>>;
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
 
-  export { TButton, TCowsay, TThemeProvider };
+  export { TTable, TButton, TCowsay, TThemeProvider };
 }

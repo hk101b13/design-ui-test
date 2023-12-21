@@ -5,7 +5,7 @@ import { Theme } from "@emotion/react";
 import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
 import MColors from "MColors.json";
 
-export interface TableColor {
+export interface TTableColor {
   headerColor?: string;
   rowColor?: string;
   hoverRowColor?: string;
@@ -14,10 +14,10 @@ export interface TableColor {
 
 export interface TTableProps {
   customStyle?: Interpolation<Theme>;
-  tableColor?: TableColor;
+  tableColor?: TTableColor;
 }
 
-function setTableColor(tableColor?: TableColor): TableColor {
+function setTableColor(tableColor?: TTableColor): TTableColor {
   const { colorScheme } = useContext(ThemeContext);
   let newTableColor = {
     headerColor: MColors.schemes.light.primary,
