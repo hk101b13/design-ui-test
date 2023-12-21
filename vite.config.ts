@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
+import "@emotion/react";
 
 export default defineConfig({
   plugins: [
@@ -41,5 +42,8 @@ export default defineConfig({
   },
   resolve: {
     dedupe: ["react", "react-dom"],
+  },
+  optimizeDeps: {
+    include: ["@emotion/react"],
   },
 });

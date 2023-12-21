@@ -70,17 +70,17 @@ declare module "design-ui-test/TButton" {
 }
 
 declare module "design-ui-test/TTable" {
-  // export interface TTableColor {
-  //   headerColor?: string;
-  //   rowColor?: string;
-  //   hoverRowColor?: string;
-  //   textColor?: string;
-  // }
+  export interface TTableColor {
+    headerColor?: string;
+    rowColor?: string;
+    hoverRowColor?: string;
+    textColor?: string;
+  }
 
-  // export interface TTableProps {
-  //   customStyle?: Interpolation<Theme>;
-  //   tableColor?: TTableColor;
-  // }
+  export interface TTableProps {
+    customStyle?: Interpolation<Theme>;
+    tableColor?: TTableColor;
+  }
 
   const TTable: React.FC;
 
