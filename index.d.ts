@@ -1,4 +1,9 @@
 declare module "design-ui-test" {
+  export interface MTableProps {
+    customStyle?: Interpolation<Theme>;
+    tableColor?: MTableColor;
+  }
+
   export interface TButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement> | undefined;
     qtype?: "info" | "success" | "warning" | "error";
@@ -36,6 +41,7 @@ declare module "design-ui-test" {
     fontFamily?: string;
   }
 
+  const MTable: React.FC<MTableProps & TableProps<any>>;
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
