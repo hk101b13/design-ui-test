@@ -1,30 +1,32 @@
-declare module "design-ui-test/TTransfer" {
-  const TTransfer: React.FC;
-
-  export { TTransfer };
-}
-
-declare module "design-ui-test/TSwitch" {
-  export interface TSwitchProps {
+declare module "design-ui-test" {
+  import { TableProps } from "antd";
+  export interface TTableColor {
+    headerColor?: string;
+    rowColor?: string;
+    hoverRowColor?: string;
+    textColor?: string;
+  }
+  export interface TTableProps {
     customStyle?: Interpolation<Theme>;
+    tableColor?: TTableColor;
   }
 
-  const TSwitch: React.FC<TSwitchProps & SwitchProps>;
+  export interface TButtonProps {
+    onClick?: React.MouseEventHandler<HTMLElement> | undefined;
+    qtype?: "info" | "success" | "warning" | "error";
+    qsize?: "large" | "middle" | "small";
 
-  export { TSwitch };
-}
-
-declare module "design-ui-test/TCowsay" {
+    disabled?: boolean;
+    loading?: boolean;
+    children?: ReactNode;
+    className?: string;
+    style?: React.CSSProperties;
+    customstyle?: Interpolation<Theme>;
+  }
   export interface TCowsayProps {
     content?: string;
   }
 
-  const TCowsay: React.FC<TCowsayProps>;
-
-  export { TCowsay };
-}
-
-declare module "design-ui-test/TThemeProvider" {
   export interface TThemeProviderProps {
     colorScheme?: {
       text?: string;
@@ -46,44 +48,16 @@ declare module "design-ui-test/TThemeProvider" {
     fontFamily?: string;
   }
 
-  const TThemeProvider: React.FC<TThemeProviderProps>;
-
-  export { TThemeProvider };
-}
-
-declare module "design-ui-test/TButton" {
-  export interface TButtonProps {
-    onClick?: React.MouseEventHandler<HTMLElement> | undefined;
-    qtype?: "info" | "success" | "warning" | "error";
-    qsize?: "large" | "middle" | "small";
-
-    disabled?: boolean;
-    loading?: boolean;
-    children?: ReactNode;
-    className?: string;
-    style?: React.CSSProperties;
-    customstyle?: Interpolation<Theme>;
-  }
-  const TButton: React.FC<TButtonProps>;
-
-  export { TButton };
-}
-
-declare module "design-ui-test/TTable" {
-  import { TableProps } from "antd";
-  export interface TTableColor {
-    headerColor?: string;
-    rowColor?: string;
-    hoverRowColor?: string;
-    textColor?: string;
-  }
-
-  export interface TTableProps {
+  export interface TSwitchProps {
     customStyle?: Interpolation<Theme>;
-    tableColor?: TTableColor;
   }
 
+  const TTransfer: React.FC;
   const TTable: React.FC<TTableProps & TableProps<any>>;
+  const TButton: React.FC<TButtonProps>;
+  const TCowsay: React.FC<TCowsayProps>;
+  const TThemeProvider: React.FC<TThemeProviderProps>;
+  const TSwitch: React.FC<TSwitchProps & SwitchProps>;
 
-  export { TTable };
+  export { TButton, TCowsay, TThemeProvider, TSwitch, TTransfer, TTable };
 }
