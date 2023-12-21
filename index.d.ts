@@ -48,10 +48,10 @@ declare module "design-ui-test" {
     fontFamily?: string;
   }
 
-  const TTable: React.FC<TTableProps & TableProps<any>>;
+  // const TTable: React.FC<TTableProps & TableProps<any>>;
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
 
-  export { TTable, TButton, TCowsay, TThemeProvider };
+  export { TButton, TCowsay, TThemeProvider };
 }
