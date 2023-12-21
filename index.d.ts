@@ -1,15 +1,4 @@
 declare module "design-ui-test" {
-  // export interface TTableColor {
-  //   headerColor?: string;
-  //   rowColor?: string;
-  //   hoverRowColor?: string;
-  //   textColor?: string;
-  // }
-  // export interface TTableProps {
-  //   customStyle?: Interpolation<Theme>;
-  //   tableColor?: TTableColor;
-  // }
-
   export interface TButtonProps {
     onClick?: React.MouseEventHandler<HTMLElement> | undefined;
     qtype?: "info" | "success" | "warning" | "error";
@@ -52,11 +41,29 @@ declare module "design-ui-test" {
   }
 
   const TTransfer: React.FC;
-  const TTable: React.FC;
+
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
   const TSwitch: React.FC<TSwitchProps & SwitchProps>;
 
-  export { TButton, TCowsay, TThemeProvider, TSwitch, TTransfer, TTable };
+  export { TButton, TCowsay, TThemeProvider, TSwitch, TTransfer };
+}
+
+declare module "design-ui-test/TTable" {
+  export interface TTableColor {
+    headerColor?: string;
+    rowColor?: string;
+    hoverRowColor?: string;
+    textColor?: string;
+  }
+
+  export interface TTableProps {
+    customStyle?: Interpolation<Theme>;
+    tableColor?: TTableColor;
+  }
+
+  const TTable: React.FC;
+
+  export { TTable };
 }
