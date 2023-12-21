@@ -89,7 +89,7 @@
 // };
 
 import React from "react";
-import { Table } from "antd";
+import Table from "antd/es/table";
 
 // import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
 // import MColors from "./MColors.json";
