@@ -101,13 +101,17 @@ export interface TTableColor {
   hoverRowColor?: string;
   textColor?: string;
 }
-export interface TTableProps {
-  customStyle?: Interpolation<Theme>;
-  tableColor?: TTableColor;
-}
+// export interface TTableProps {
+//   customstyle?: Interpolation<Theme>;
+//   tablecolor?: TTableColor;
+// }
 
-export const TTable = (props: TTableProps & TableProps<any>) => {
+export const TTable = (props: TableProps<any>) => {
   return (
-    <Table tableColor={props.tableColor} pagination={false} {...props}></Table>
+    <Table
+      pagination={false}
+      dataSource={props.dataSource}
+      columns={props.columns}
+    ></Table>
   );
 };
