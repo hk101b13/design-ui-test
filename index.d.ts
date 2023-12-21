@@ -51,11 +51,11 @@ declare module "design-ui-test" {
     customStyle?: Interpolation<Theme>;
   }
 
-  const TTable: React.FC;
+  // const TTable: React.FC;
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
   const TSwitch: React.FC<TSwitchProps & SwitchProps>;
 
-  export { TButton, TCowsay, TThemeProvider, TSwitch, TTable };
+  export { TButton, TCowsay, TThemeProvider, TSwitch };
 }

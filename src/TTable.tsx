@@ -87,9 +87,9 @@
 //     </div>
 //   );
 // };
-
-import React from "react";
-import Table from "antd/es/table";
+////////////////////////////////////
+// import React from "react";
+// import Table from "antd/es/table";
 
 // import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
 // import MColors from "./MColors.json";
@@ -99,6 +99,6 @@ import Table from "antd/es/table";
 //   tablecolor?: TTableColor;
 // }
 
-export const TTable = () => {
-  return <Table></Table>;
-};
+// export const TTable = () => {
+//   return <Table></Table>;
+// };
