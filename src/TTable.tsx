@@ -3,7 +3,7 @@ import { Table, TableProps } from "antd";
 import styled, { Interpolation } from "@emotion/styled";
 import { Theme } from "@emotion/react";
 import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
-import MColors from "MColors.json";
+import MColors from "./MColors.json";
 
 export interface TTableColor {
   headerColor?: string;
@@ -50,7 +50,6 @@ const StyledTable = styled(Table)((props: TTableProps & TableProps<any>) => {
   const baseStyle = {
     color: "white",
     transition: "all 0.25s ease-in-out ",
-    //   boxShadow: "2px 2px 5px 0px #AFB6B8",
     borderRadius: "8px",
     "& .ant-table-cell": {
       fontFamily: fontFamily || "",
@@ -79,14 +78,12 @@ const StyledTable = styled(Table)((props: TTableProps & TableProps<any>) => {
 
 export const TTable = (props: TTableProps & TableProps<any>) => {
   return (
-    <>
-      <div style={{ width: "1000px" }}>
-        <StyledTable
-          tableColor={props.tableColor}
-          pagination={false}
-          {...props}
-        />
-      </div>
-    </>
+    <div style={{ width: "1000px" }}>
+      <StyledTable
+        tableColor={props.tableColor}
+        pagination={false}
+        {...props}
+      />
+    </div>
   );
 };
