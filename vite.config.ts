@@ -3,11 +3,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import "@emotion/react";
-import { splitVendorChunkPlugin } from "vite";
+import dts from "vite-plugin-dts";
 
 export default defineConfig({
   plugins: [
     react(),
+    dts({
+      insertTypesEntry: true,
+    }),
     cssInjectedByJsPlugin({
       jsAssetsFilterFunction: function customJsAssetsfilterFunction(
         outputChunk
@@ -33,6 +36,12 @@ export default defineConfig({
       entry: "./src/index",
       fileName: () => "index.js",
     },
+    // lib: {
+    //   entry: path.resolve(__dirname, "src/index.tsx"),
+    //   name: formattedName,
+    //   formats: ["es", "umd"],
+    //   fileName: (format) => `${formattedName}.${format}.js`,
+    // },
     rollupOptions: {
       external: ["react", "react-dom"],
       input: "./src",
