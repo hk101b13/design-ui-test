@@ -1,4 +1,5 @@
 declare module "design-ui-test" {
+  import { TableProps } from "antd";
   export interface TTableColor {
     headerColor?: string;
     rowColor?: string;
