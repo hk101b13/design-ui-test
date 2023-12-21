@@ -87,3 +87,27 @@
 //     </div>
 //   );
 // };
+
+import React, { useContext } from "react";
+import { Table, TableProps } from "antd";
+import styled, { Interpolation } from "@emotion/styled";
+import { Theme } from "@emotion/react";
+// import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
+// import MColors from "./MColors.json";
+
+export interface TTableColor {
+  headerColor?: string;
+  rowColor?: string;
+  hoverRowColor?: string;
+  textColor?: string;
+}
+export interface TTableProps {
+  customStyle?: Interpolation<Theme>;
+  tableColor?: TTableColor;
+}
+
+export const TTable = (props: TTableProps & TableProps<any>) => {
+  return (
+    <Table tableColor={props.tableColor} pagination={false} {...props}></Table>
+  );
+};
