@@ -70,6 +70,7 @@ declare module "design-ui-test/TButton" {
 }
 
 declare module "design-ui-test/TTable" {
+  import { TableProps } from "antd";
   export interface TTableColor {
     headerColor?: string;
     rowColor?: string;
@@ -82,7 +83,7 @@ declare module "design-ui-test/TTable" {
     tableColor?: TTableColor;
   }
 
-  const TTable: React.FC;
+  const TTable: React.FC<TTableProps & TableProps<any>>;
 
   export { TTable };
 }
