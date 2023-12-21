@@ -1,20 +1,30 @@
-declare module "design-ui-test" {
-  export interface TButtonProps {
-    onClick?: React.MouseEventHandler<HTMLElement> | undefined;
-    qtype?: "info" | "success" | "warning" | "error";
-    qsize?: "large" | "middle" | "small";
+declare module "design-ui-test/TTransfer" {
+  const TTransfer: React.FC;
 
-    disabled?: boolean;
-    loading?: boolean;
-    children?: ReactNode;
-    className?: string;
-    style?: React.CSSProperties;
-    customstyle?: Interpolation<Theme>;
+  export { TTransfer };
+}
+
+declare module "design-ui-test/TSwitch" {
+  export interface TSwitchProps {
+    customStyle?: Interpolation<Theme>;
   }
+
+  const TSwitch: React.FC<TSwitchProps & SwitchProps>;
+
+  export { TSwitch };
+}
+
+declare module "design-ui-test/TCowsay" {
   export interface TCowsayProps {
     content?: string;
   }
 
+  const TCowsay: React.FC<TCowsayProps>;
+
+  export { TCowsay };
+}
+
+declare module "design-ui-test/TThemeProvider" {
   export interface TThemeProviderProps {
     colorScheme?: {
       text?: string;
@@ -36,32 +46,41 @@ declare module "design-ui-test" {
     fontFamily?: string;
   }
 
-  export interface TSwitchProps {
-    customStyle?: Interpolation<Theme>;
-  }
-
-  const TTransfer: React.FC;
-
-  const TButton: React.FC<TButtonProps>;
-  const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
-  const TSwitch: React.FC<TSwitchProps & SwitchProps>;
 
-  export { TButton, TCowsay, TThemeProvider, TSwitch, TTransfer };
+  export { TThemeProvider };
+}
+
+declare module "design-ui-test/TButton" {
+  export interface TButtonProps {
+    onClick?: React.MouseEventHandler<HTMLElement> | undefined;
+    qtype?: "info" | "success" | "warning" | "error";
+    qsize?: "large" | "middle" | "small";
+
+    disabled?: boolean;
+    loading?: boolean;
+    children?: ReactNode;
+    className?: string;
+    style?: React.CSSProperties;
+    customstyle?: Interpolation<Theme>;
+  }
+  const TButton: React.FC<TButtonProps>;
+
+  export { TButton };
 }
 
 declare module "design-ui-test/TTable" {
-  export interface TTableColor {
-    headerColor?: string;
-    rowColor?: string;
-    hoverRowColor?: string;
-    textColor?: string;
-  }
+  // export interface TTableColor {
+  //   headerColor?: string;
+  //   rowColor?: string;
+  //   hoverRowColor?: string;
+  //   textColor?: string;
+  // }
 
-  export interface TTableProps {
-    customStyle?: Interpolation<Theme>;
-    tableColor?: TTableColor;
-  }
+  // export interface TTableProps {
+  //   customStyle?: Interpolation<Theme>;
+  //   tableColor?: TTableColor;
+  // }
 
   const TTable: React.FC;
 

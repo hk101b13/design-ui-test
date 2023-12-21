@@ -21,6 +21,12 @@
     "noImplicitAny": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "./src",
+
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "stripInternal": true,
+    "resolvePackageJsonExports": true,
     "paths": {
       "@/*": ["./*"]
     }
