@@ -1,5 +1,4 @@
 declare module "design-ui-test" {
-  import { TableProps } from "antd";
   // export interface TTableColor {
   //   headerColor?: string;
   //   rowColor?: string;
@@ -52,7 +51,7 @@ declare module "design-ui-test" {
     customStyle?: Interpolation<Theme>;
   }
 
-  const TTable: React.FC<TableProps<any>>;
+  const TTable: React.FC;
   const TButton: React.FC<TButtonProps>;
   const TCowsay: React.FC<TCowsayProps>;
   const TThemeProvider: React.FC<TThemeProviderProps>;
