@@ -1,3 +1,10 @@
+import React from "react";
+import Table from "antd/es/table";
+
+export const TTable = () => {
+  return <Table></Table>;
+};
+
 // import React, { useContext } from "react";
 // import { Table, TableProps } from "antd";
 // import styled, { Interpolation } from "@emotion/styled";
@@ -88,17 +95,3 @@
 //   );
 // };
 ////////////////////////////////////
-// import React from "react";
-// import Table from "antd/es/table";
-
-// import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
-// import MColors from "./MColors.json";
-
-// export interface TTableProps {
-//   customstyle?: Interpolation<Theme>;
-//   tablecolor?: TTableColor;
-// }
-
-// export const TTable = () => {
-//   return <Table></Table>;
-// };
