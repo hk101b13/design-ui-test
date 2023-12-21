@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import "@emotion/react";
+import { splitVendorChunkPlugin } from "vite";
 
 export default defineConfig({
   plugins: [
@@ -19,13 +20,13 @@ export default defineConfig({
     host: "0.0.0.0",
   },
   build: {
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
+    // minify: "terser",
+    // terserOptions: {
+    //   compress: {
+    //     drop_console: true,
+    //     drop_debugger: true,
+    //   },
+    // },
     target: ["esnext"],
     lib: {
       name: "design-ui-test",
