@@ -1,5 +1,5 @@
-// import { Transfer } from "antd";
+import { Transfer } from "antd";
 
-// export const TTransfer = () => {
-//   return <Transfer></Transfer>;
-// };
+export const TTransfer = () => {
+  return <Transfer></Transfer>;
+};
