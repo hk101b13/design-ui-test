@@ -24,8 +24,6 @@ export default defineConfig({
       external: ["react", "react-dom", "styled-components"],
       output: {
         preserveModules: true,
-        entryFileNames: "[name].js",
-        chunkFileNames: "[name].js",
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
