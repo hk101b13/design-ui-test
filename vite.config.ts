@@ -19,15 +19,9 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom", "styled-components"],
+      external: ["react", "react-dom"],
       output: {
         preserveModules: true,
-        globals: {
-          react: "React",
-          "react-dom": "ReactDOM",
-          "@emotion/react": "emotionReact",
-          "@emotion/styled": "emotionStyled,",
-        },
       },
     },
   },
