@@ -7,9 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-!dist/node_modules
-!dist/node_modules/.pnpm/
-node_modules
+./node_modules
 
 # dist
 dist-ssr
