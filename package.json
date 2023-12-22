@@ -6,13 +6,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.es.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/src/index.js",
+  "module": "./dist/src/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/src/index.js"
     }
   },
   "scripts": {
