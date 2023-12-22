@@ -1,4 +1,4 @@
-import { j as jsxRuntimeExports } from "../node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js";
+import { jsx } from "react/jsx-runtime";
 import React__default, { useContext } from "react";
 import newStyled from "../node_modules/.pnpm/@emotion_styled@11.11.0_@emotion_react@11.11.1_@types_react@18.2.43_react@18.2.0/node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js";
 import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
@@ -100,7 +100,7 @@ const StyledButton = newStyled(Button)((props) => {
   return [baseStyles, importantCustomstyles];
 });
 const TButton = React__default.forwardRef((props, ref) => {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+  return /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx(
     StyledButton,
     {
       className: props.className,

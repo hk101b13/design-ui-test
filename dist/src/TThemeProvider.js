@@ -1,4 +1,4 @@
-import { j as jsxRuntimeExports } from "../node_modules/.pnpm/react@18.2.0/node_modules/react/jsx-runtime.js";
+import { jsx } from "react/jsx-runtime";
 import { createContext } from "react";
 import instance from "../node_modules/.pnpm/i18next@23.7.11/node_modules/i18next/dist/esm/i18next.js";
 import { I18nextProvider } from "../node_modules/.pnpm/react-i18next@13.5.0_i18next@23.7.11_react-dom@18.2.0_react@18.2.0/node_modules/react-i18next/dist/es/I18nextProvider.js";
@@ -51,7 +51,7 @@ const TThemeProvider = (props) => {
       escapeValue: false
     }
   });
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeContext.Provider, { value: contextValue, children: /* @__PURE__ */ jsxRuntimeExports.jsx(I18nextProvider, { i18n: newI18n, children }) }) });
+  return /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx(ThemeContext.Provider, { value: contextValue, children: /* @__PURE__ */ jsx(I18nextProvider, { i18n: newI18n, children }) }) });
 };
 export {
   AddImportantToStyles,
