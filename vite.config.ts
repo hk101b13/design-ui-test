@@ -25,6 +25,7 @@ export default defineConfig({
         "react/jsx-runtime",
         "@emotion/react",
         "@emotion/styled",
+        "antd",
       ],
       output: {
         preserveModules: true,
