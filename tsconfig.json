@@ -31,6 +31,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["src", "index.d.ts"],
+  "include": ["./src/*.tsx", "./src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
