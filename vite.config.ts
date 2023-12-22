@@ -25,7 +25,6 @@ export default defineConfig({
         "react/jsx-runtime",
         "@emotion/react",
         "@emotion/styled",
-        "antd",
         "i18next",
         "react-i18next",
       ],

@@ -1,9 +1,9 @@
 import { jsx } from "react/jsx-runtime";
-import React, { useContext } from "react";
+import React__default, { useContext } from "react";
 import styled from "@emotion/styled";
 import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
-import { Button } from "antd";
 import MColors from "./MColors.json.js";
+import Button from "../node_modules/.pnpm/antd@4.24.8_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/button/button.js";
 function SetButtonLayout(size) {
   let buttonLayout = { padding: "10px 20px" };
   switch (size) {
@@ -99,7 +99,7 @@ const StyledButton = styled(Button)((props) => {
   const importantCustomstyles = AddImportantToStyles(props.customstyle);
   return [baseStyles, importantCustomstyles];
 });
-const TButton = React.forwardRef((props, ref) => {
+const TButton = React__default.forwardRef((props, ref) => {
   return /* @__PURE__ */ jsx("div", { children: /* @__PURE__ */ jsx(
     StyledButton,
     {
