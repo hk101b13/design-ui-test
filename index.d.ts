@@ -3,7 +3,7 @@ declare module "design-ui-test" {
   // import styled, { Interpolation } from "@emotion/styled";
   // import { Theme } from "@emotion/react";
   import { SwitchProps } from "antd";
-  import { TButtonProps } from "@/TButton";
+  import { TButtonProps } from "./src/TButton";
   import { TSwitchProps } from "@/TSwitch";
   import { TTableProps } from "@/TTable";
   import { TThemeProviderProps } from "@/TThemeProvider";
