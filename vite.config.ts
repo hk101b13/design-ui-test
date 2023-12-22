@@ -27,6 +27,7 @@ export default defineConfig({
         "@emotion/styled",
         "antd",
         "i18next",
+        "react-i18next",
       ],
       output: {
         preserveModules: true,

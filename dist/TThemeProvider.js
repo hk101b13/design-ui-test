@@ -1,7 +1,7 @@
 import { jsx } from "react/jsx-runtime";
 import { createContext } from "react";
 import i18next from "i18next";
-import { I18nextProvider } from "../node_modules/.pnpm/react-i18next@13.5.0_i18next@23.7.11_react-dom@18.2.0_react@18.2.0/node_modules/react-i18next/dist/es/I18nextProvider.js";
+import { I18nextProvider } from "react-i18next";
 const AddImportantToStyles = (styles) => {
   if (!styles) {
     return {};
