@@ -19,13 +19,22 @@ export default defineConfig({
       fileName: (format, entryName) => `${entryName}.js`,
     },
     rollupOptions: {
-      external: ["react", "react-dom", "react/jsx-runtime"],
+      external: [
+        "react",
+        "react-dom",
+        "react/jsx-runtime",
+        "@emotion/react",
+        "@emotion/styled",
+      ],
       output: {
         preserveModules: true,
       },
     },
   },
   resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
     dedupe: ["react", "react-dom"],
   },
 });

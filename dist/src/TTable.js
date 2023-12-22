@@ -1,6 +1,6 @@
 import { jsx } from "react/jsx-runtime";
 import { useContext } from "react";
-import newStyled from "../node_modules/.pnpm/@emotion_styled@11.11.0_@emotion_react@11.11.1_@types_react@18.2.43_react@18.2.0/node_modules/@emotion/styled/dist/emotion-styled.browser.esm.js";
+import styled from "@emotion/styled";
 import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
 import MColors from "./MColors.json.js";
 import Table from "../node_modules/.pnpm/antd@4.24.8_react-dom@18.2.0_react@18.2.0/node_modules/antd/es/table/Table.js";
@@ -30,7 +30,7 @@ function setTableColor(tableColor) {
   }
   return newTableColor;
 }
-const StyledTable = newStyled(Table)((props) => {
+const StyledTable = styled(Table)((props) => {
   const { fontSize, fontFamily } = useContext(ThemeContext);
   let tableColor = setTableColor(props.tableColor);
   const baseStyle = {
