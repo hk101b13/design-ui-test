@@ -32,6 +32,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src", "index.d.ts", "src/App.tsx", "src/main.tsx", "storybook"],
+  "include": ["src", "index.d.ts", "src/index,tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

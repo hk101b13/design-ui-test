@@ -1,4 +1,5 @@
 import { jsx, jsxs } from "react/jsx-runtime";
+import "./style.scss.js";
 function TCowsay(props) {
   return /* @__PURE__ */ jsx("div", { style: { height: "100%", width: "100%" }, children: /* @__PURE__ */ jsxs("pre", { style: { fontFamily: "Arial", height: "100%", width: "100%" }, children: [
     /* @__PURE__ */ jsx("div", { className: "MonoFont", children: `( ${props.content || "hello"} )` }),

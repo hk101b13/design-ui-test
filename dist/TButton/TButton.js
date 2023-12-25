@@ -1,9 +1,10 @@
 import { jsx } from "react/jsx-runtime";
 import React, { useContext } from "react";
 import styled from "@emotion/styled";
-import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
+import { ThemeContext, AddImportantToStyles } from "../TThemeProvider/TThemeProvider.js";
 import { Button } from "antd";
-import MColors from "./MColors.json.js";
+import MColors from "../Theme/MColors.json.js";
+import "./style.scss.js";
 function SetButtonLayout(size) {
   let buttonLayout = { padding: "10px 20px" };
   switch (size) {

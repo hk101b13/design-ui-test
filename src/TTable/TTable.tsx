@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { Table, TableProps } from "antd";
 import styled, { Interpolation } from "@emotion/styled";
 import { Theme } from "@emotion/react";
-import { ThemeContext, AddImportantToStyles } from "./TThemeProvider";
-import MColors from "./MColors.json";
+import {
+  ThemeContext,
+  AddImportantToStyles,
+} from "../TThemeProvider/TThemeProvider";
+import MColors from "../Theme/MColors.json";
 
 export interface TTableColor {
   headerColor?: string;

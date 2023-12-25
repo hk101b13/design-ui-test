@@ -2,8 +2,8 @@ import { jsx } from "react/jsx-runtime";
 import { useContext } from "react";
 import { Table } from "antd";
 import styled from "@emotion/styled";
-import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
-import MColors from "./MColors.json.js";
+import { ThemeContext, AddImportantToStyles } from "../TThemeProvider/TThemeProvider.js";
+import MColors from "../Theme/MColors.json.js";
 function setTableColor(tableColor) {
   const { colorScheme } = useContext(ThemeContext);
   let newTableColor = {

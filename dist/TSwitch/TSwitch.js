@@ -2,7 +2,7 @@ import { jsx } from "react/jsx-runtime";
 import { useContext } from "react";
 import { Switch } from "antd";
 import styled from "@emotion/styled";
-import { ThemeContext, AddImportantToStyles } from "./TThemeProvider.js";
+import { ThemeContext, AddImportantToStyles } from "../TThemeProvider/TThemeProvider.js";
 const StyledSwitch = styled(Switch)((props) => {
   const { colorScheme } = useContext(ThemeContext);
   const baseStyle = {

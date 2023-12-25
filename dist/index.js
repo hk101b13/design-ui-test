@@ -1,9 +1,9 @@
-import { TButton } from "./TButton.js";
-import { TCowsay } from "./TCowsay.js";
-import { TThemeProvider } from "./TThemeProvider.js";
-import { TTransfer } from "./TTransfer.js";
-import { TSwitch } from "./TSwitch.js";
-import { TTable } from "./TTable.js";
+import { TButton } from "./TButton/TButton.js";
+import { TCowsay } from "./TCowsay/TCowsay.js";
+import { TThemeProvider } from "./TThemeProvider/TThemeProvider.js";
+import { TTransfer } from "./TTransfer/TTransfer.js";
+import { TSwitch } from "./TSwitch/TSwitch.js";
+import { TTable } from "./TTable/TTable.js";
 export {
   TButton,
   TCowsay,
