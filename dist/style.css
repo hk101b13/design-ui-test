@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 .MonoFont {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Mono", monospace !important;
 }all {
   border: 0px;
 }

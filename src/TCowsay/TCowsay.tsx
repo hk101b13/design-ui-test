@@ -8,7 +8,7 @@ export interface TCowsayProps {
 export function TCowsay(props: TCowsayProps) {
   return (
     <div style={{ height: "100%", width: "100%" }}>
-      <pre style={{ fontFamily: "Arial", height: "100%", width: "100%" }}>
+      <pre style={{ height: "100%", width: "100%" }}>
         <div className="MonoFont">{`( ${props.content || "hello"} )`}</div>
         <div className="MonoFont">{"     \\"}</div>
         <div className="MonoFont">{"      ^__^"}</div>
